@@ -1,0 +1,135 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background-color: rgba(9, 9, 9, 0.4);
+  backdrop-filter: blur(22.9px);
+  -webkit-backdrop-filter: blur(22.9px);
+  z-index: 10001;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--font-roboto-condensed), sans-serif;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cyanDot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--cyan);
+  border-radius: 50%;
+  box-shadow:
+    0 0 8px var(--cyan),
+    0 0 15px var(--cyan);
+}
+
+.logoText {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.navLink {
+  display: flex;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.navLink:hover {
+  transform: translateY(-2px);
+}
+
+.navLink:hover .linkLabel {
+  color: var(--cyan);
+  text-shadow:
+    0 0 10px var(--cyan),
+    0 0 20px var(--cyan);
+}
+
+.navLink:hover .linkNum {
+  color: var(--white);
+}
+
+.linkNum {
+  color: var(--pink);
+  transition: color 0.2s ease;
+}
+
+.linkLabel {
+  color: var(--white);
+  transition: all 0.2s ease;
+}
+
+.contactBtn {
+  position: relative;
+  display: inline-block;
+  padding: 1.5px;
+  background-color: var(--pink);
+  text-decoration: none;
+  font-family: var(--font-roboto-condensed), sans-serif;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 12px) 0,
+    100% 12px,
+    100% 100%,
+    12px 100%,
+    0 calc(100% - 12px)
+  );
+  transition: all 0.3s ease;
+}
+
+.btnInner {
+  display: block;
+  background-color: var(--pink-dark);
+  color: var(--pink);
+  padding: 8px 45px;
+  font-size: 9px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+
+  clip-path: polygon(
+    0 0,
+    calc(100% - 11px) 0,
+    100% 11px,
+    100% 100%,
+    11px 100%,
+    0 calc(100% - 11px)
+  );
+}
+
+.contactBtn:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 12px var(--pink));
+}
+
+@media (max-width: 900px) {
+  .nav {
+    display: none;
+  }
+  .header {
+    padding: 10px 20px;
+  }
+}

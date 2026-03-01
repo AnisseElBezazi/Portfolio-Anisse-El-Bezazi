@@ -1,0 +1,166 @@
+.historySection {
+  width: 100%;
+  padding: 50px 50px;
+  background-color: rgba(0, 0, 0, 0.64);
+  font-family: var(--font-jetbrains), monospace;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-width: 1200px;
+  margin: 0 auto 80px auto;
+}
+
+.titleIcon {
+  position: relative;
+  width: 25px;
+  height: 25px;
+}
+
+.square1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #00bec6;
+}
+
+.square2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #00bec6;
+}
+
+.mainTitle {
+  font-family: var(--font-orbitron), sans-serif;
+  color: #00bec6;
+  font-size: 32px;
+  letter-spacing: 3px;
+}
+
+.timelineContainer {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.centralLine {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #00bec6;
+  transform: translateX(-50%);
+}
+
+.timelineItem {
+  position: relative;
+  width: 50%;
+  display: flex;
+}
+
+.timelineItem.left {
+  align-self: flex-start;
+  justify-content: flex-end;
+  padding-right: 50px;
+}
+
+.timelineItem.right {
+  align-self: flex-end;
+  justify-content: flex-start;
+  padding-left: 50px;
+}
+
+.node {
+  position: absolute;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: #00bec6;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  box-shadow:
+    0 0 10px #ff5ea8,
+    0 0 20px #ff5ea8;
+}
+
+.left .node {
+  right: -9px;
+}
+.right .node {
+  left: -9px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  width: 100%;
+  max-width: 450px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: #00bec6;
+  background-color: rgba(0, 190, 198, 0.05);
+}
+
+.cardTitle {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.cardInfo {
+  color: #00bec6;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 900px) {
+  .centralLine {
+    left: 20px;
+  }
+
+  .timelineItem.left,
+  .timelineItem.right {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 20px;
+    justify-content: flex-start;
+  }
+
+  .left .node,
+  .right .node {
+    left: 12px;
+    right: auto;
+
+    .card {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 22px;
+    letter-spacing: 2px;
+  }
+
+  .header {
+    margin-bottom: 40px;
+  }
+}

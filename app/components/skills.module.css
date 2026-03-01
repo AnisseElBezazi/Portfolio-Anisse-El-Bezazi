@@ -1,0 +1,155 @@
+.skillsSection {
+  width: 100%;
+  padding: 80px 50px;
+  background-color: rgba(0, 0, 0, 0.64);
+  font-family: var(--font-jetbrains), monospace;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+}
+
+.headerIcon {
+  color: #00bec6;
+  width: 40px;
+  height: 40px;
+}
+
+.mainTitle {
+  font-family: var(--font-orbitron), sans-serif;
+  color: #00bec6;
+  font-size: 32px;
+  letter-spacing: 3px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: #00bec6;
+  background-color: rgba(0, 190, 198, 0.05);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.cardIcon {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.iconImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.cardTexts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cardTitle {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.cardSubtitle {
+  color: #888;
+  font-size: 13px;
+}
+.cardSubtitle.pink {
+  color: var(--pink);
+}
+
+.progressSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.maitriseLabel {
+  color: #00bec6;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.progressBarContainer {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  margin-top: 5px;
+}
+
+.progressBarFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--pink);
+  border-radius: 3px;
+  box-shadow: 0 0 10px var(--pink);
+}
+
+.progressMarker {
+  position: absolute;
+  bottom: -25px;
+  color: #00bec6;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 22px;
+    letter-spacing: 2px;
+  }
+
+  .header {
+    margin-bottom: 40px;
+  }
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    padding: 20px;
+  }
+}
