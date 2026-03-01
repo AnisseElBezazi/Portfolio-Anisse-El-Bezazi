@@ -7,7 +7,6 @@
   overflow: hidden;
 }
 
-/* HEADER BAR */
 .topBar {
   background: transparent;
   display: flex;
@@ -84,7 +83,6 @@
   margin: 0;
 }
 
-/* TITRE ET DESCRIPTION */
 .title {
   font-size: 48px;
   margin: 0;
@@ -241,9 +239,7 @@
   color: #000;
   box-shadow: 0 0 20px var(--pink);
 }
-/* =========================================
-   RESPONSIVE MOBILE
-   ========================================= */
+
 @media (max-width: 768px) {
   .main {
     padding: 60px 15px;
@@ -260,7 +256,6 @@
     display: none;
   }
 
-  /* Garde l'ordre naturel du HTML (Image puis Titre) */
   .contentGrid {
     display: flex;
     flex-direction: column;

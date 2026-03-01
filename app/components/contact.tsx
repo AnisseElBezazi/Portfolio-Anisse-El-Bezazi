@@ -1,12 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import styles from "./contact.module.css";
 
 export default function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState("idle");
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,6 +31,13 @@ export default function Contact() {
     } catch (error) {
       setStatus("error");
     }
+  };
+
+  const handleCancel = () => {
+    setEmail("");
+    setMessage("");
+    setStatus("idle");
+    router.push("/");
   };
 
   return (
@@ -150,11 +159,7 @@ export default function Contact() {
           <button
             type="button"
             className={styles.btnCancel}
-            onClick={() => {
-              setEmail("");
-              setMessage("");
-              setStatus("idle");
-            }}
+            onClick={handleCancel}
           >
             ABANDONNER L'EXTRACTION
           </button>
