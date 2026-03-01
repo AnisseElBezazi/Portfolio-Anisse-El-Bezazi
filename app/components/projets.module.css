@@ -175,8 +175,13 @@
   }
 
   .projectCard {
-    width: 320px;
+    width: 75vw;
     padding: 15px;
+  }
+
+  .projectsList {
+    padding-right: 20px;
+    gap: 15px;
   }
 
   .imageContainer {
