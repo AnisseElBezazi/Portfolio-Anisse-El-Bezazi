@@ -1,10 +1,10 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, Suspense } from "react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import styles from "./header.module.css";
 
-export default function Header() {
+function HeaderContent() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const router = useRouter();
   const pathname = usePathname();
@@ -90,5 +90,15 @@ export default function Header() {
         </span>
       </a>
     </header>
+  );
+}
+
+export default function Header() {
+  return (
+    <Suspense
+      fallback={<div className={styles.header} style={{ opacity: 0 }} />}
+    >
+      <HeaderContent />
+    </Suspense>
   );
 }
