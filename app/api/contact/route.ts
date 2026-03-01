@@ -1,4 +1,3 @@
-// app/api/contact/route.ts
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
@@ -17,13 +16,14 @@ export async function POST(req: Request) {
 
     const data = await resend.emails.send({
       from: "Portfolio <onboarding@resend.dev>",
-      to: ["anisse.elbezazi@gmail.com"],
+      to: [process.env.CONTACT_EMAIL || "anisse.elbezazi@gmail.com"],
       subject: `Nouveau message de ${email}`,
       text: `Expéditeur: ${email}\n\nMessage:\n${message}`,
     });
 
     return NextResponse.json({ success: true, data });
   } catch (error) {
+    console.error("Erreur Resend:", error);
     return NextResponse.json({ error: "Erreur serveur" }, { status: 500 });
   }
 }
