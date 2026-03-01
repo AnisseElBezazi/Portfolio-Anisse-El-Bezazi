@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PORTFOLIO ANISSE EL BEZAZI - Thème cyber punk 
 
-## Getting Started
+<img width="1918" height="1024" alt="image" src="https://github.com/user-attachments/assets/d8da853f-6f05-408b-8333-5cf9052756db" />
 
-First, run the development server:
+## MAQUETTE ET DÉPLOIEMENT
+* **Site déployé (Render) :**  https://portfolio-anisse-el-bezazi.onrender.com/
+* **Maquette Figma :** https://www.figma.com/design/n7iq7Zfs11oxMVyYhTv9NK/Porfolio?t=0l0WKDA5nroWxOxz-0
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Fonctionnalités :
+* **Parcours & Bio :** Présentation scolaire et professionnelle.
+* **liste Projets & Skills :** Liste dynamique gérée par une base de données SQLite.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## INSTALLATION LOCALE
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clonage du projet :** git clone https://github.com/AnisseElBezazi/Portfolio-Anisse-El-Bezazi.git
+2. **Entrer dans le dossier :** cd Portfolio-Anisse-El-Bezazi
+3. **Installation des dépendances :** npm install
+4. **Lancement du serveur :** npm run dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## CONFIGURATION DES VARIABLES (.env)
 
-## Learn More
+Créez un fichier .env.local à la racine avec les variables suivantes pour le fonctionnement de Resend :
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* **RESEND_API_KEY** = votre_cle_api_resend
+* **CONTACT_EMAIL** = votre-email@exemple.com
