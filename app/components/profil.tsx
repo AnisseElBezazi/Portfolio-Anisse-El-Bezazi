@@ -70,7 +70,7 @@ export default function BioScan() {
           </div>
 
           <a
-            href="/CV_Anisse_EL_BEZAZI_V4.pdf"
+            href="/CV_Anisse_EL_BEZAZI_V6.pdf"
             className={styles.btnDownloadCv}
           >
             <span>Télécharger CV [PDF]</span>
