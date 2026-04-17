@@ -26,8 +26,24 @@ CREATE TABLE project_features (
   FOREIGN KEY (project_id) REFERENCES projects(id) ON DELETE CASCADE
 );
 
+-- Insertion des projets (Foodmoov en ID 1)
 INSERT INTO projects (title, slug, badge, description, status, image, theme, architecture, backend, frontend, database_tech, action_url, action_type) 
 VALUES 
+(
+  'FOODMOOV', 
+  'foodmoov', 
+  'ALERTE_STAGE', 
+  'Stage en startup avec responsabilités 360°. Lead sur le design, l''architecture et le développement d''une solution de géolocalisation de foodtrucks en temps réel.', 
+  'EN COURS', 
+  '/images/projet_foodmoov.png', 
+  'cyan',
+  'SPA / API REST',
+  'Node.js / Express',
+  'React / TailwindCSS',
+  'PostgreSQL',
+  '#',
+  'site'
+),
 (
   'LA_CULTURE_DU_MOUVEMENT', 
   'la-culture-du-mouvement', 
@@ -164,69 +180,77 @@ VALUES
   'github'
 );
 
--- Features pour La Culture du Mouvement (ID = 1)
+-- Features pour Foodmoov (ID = 1)
 INSERT INTO project_features (project_id, title, description) 
 VALUES 
-(1, 'Landing Page & Responsive', 'Design et intégration d''une interface adaptative haute performance (Validé par jury : "Chapeau").'),
-(1, 'Développement Thème PHP', 'Architecture WordPress sur-mesure avec ACF pour une autonomie client totale.'),
-(1, 'Proxy Calendrier ICS', 'Passerelle PHP sécurisée pour synchronisation d''agenda sans bug CORS.'),
-(1, 'Optimisation Stratégique', 'Audit des solutions SaaS permettant une économie de 130€/mois et mise en conformité RGPD.');
+(1, 'Product Management & Design', 'Pilotage complet du produit, de la conception UX/UI sur Figma jusqu''au déploiement.'),
+(1, 'Géolocalisation Live', 'Système de tracking et d''affichage des foodtrucks actifs sur une carte interactive.'),
+(1, 'Dashboard Restaurateur', 'Interface de gestion pour les partenaires : menus, horaires et zones de présence.'),
+(1, 'Stack Full-Stack Moderne', 'Développement d''une API robuste et d''une interface frontend réactive pour une expérience fluide.');
 
--- Features pour Who The Most Valuable (ID = 2)
+-- Features pour La Culture du Mouvement (ID = 2)
 INSERT INTO project_features (project_id, title, description) 
 VALUES 
-(2, 'Extraction API Overfast', 'Récupération et traitement des données officielles de Blizzard en temps réel.'),
-(2, 'Algorithme de Scoring', 'Calcul d''un score de performance équitable entre les différents styles de jeu.'),
-(2, 'Gestion Multi-plateforme', 'Comparaison indépendante entre joueurs PC et Console.'),
-(2, 'Détection de Confidentialité', 'Système d''alerte pour aider les utilisateurs à passer leur profil en public.');
+(2, 'Landing Page & Responsive', 'Design et intégration d''une interface adaptative haute performance.'),
+(2, 'Développement Thème PHP', 'Architecture WordPress sur-mesure avec ACF pour une autonomie client totale.'),
+(2, 'Proxy Calendrier ICS', 'Passerelle PHP sécurisée pour synchronisation d''agenda sans bug CORS.'),
+(2, 'Optimisation Stratégique', 'Audit des solutions SaaS permettant une économie de 130€/mois.');
 
--- Features pour SoftMove (ID = 3)
+-- Features pour Who The Most Valuable (ID = 3)
 INSERT INTO project_features (project_id, title, description) 
 VALUES 
-(3, 'Algorithme anti-tremblement', 'Moyenne glissante pour filtrer les mouvements parasites.'),
-(3, 'Aim Assist 3D', 'Système de magnétisme ciblant le vertex le plus proche.'),
-(3, 'Séparation d''intention', 'Création d''un système à 3 zones pour interpréter les mouvements complexes.'),
-(3, 'Pré-sélection visuelle', 'Mise en surbrillance via le module GPU de Blender.');
+(3, 'Extraction API Overfast', 'Récupération et traitement des données officielles de Blizzard en temps réel.'),
+(3, 'Algorithme de Scoring', 'Calcul d''un score de performance équitable entre les différents styles de jeu.'),
+(3, 'Gestion Multi-plateforme', 'Comparaison indépendante entre joueurs PC et Console.'),
+(3, 'Détection de Confidentialité', 'Système d''alerte pour aider les utilisateurs à passer leur profil en public.');
 
--- Features pour Flixthread (ID = 4)
+-- Features pour SoftMove (ID = 4)
 INSERT INTO project_features (project_id, title, description) 
 VALUES 
-(4, 'Architecture Sécurisée', 'PHP pur avec protection XSS, injections SQL et sécurisation des uploads.'),
-(4, 'Système de Tokens CSRF', 'Jetons de sécurité uniques pour valider l''intégrité des requêtes.'),
-(4, 'Salons thématiques', 'Fils de discussion isolés et dédiés à des œuvres cinématographiques.'),
-(4, 'Gestion de profils', 'Système d''authentification et d''édition de profil complet.');
+(4, 'Algorithme anti-tremblement', 'Moyenne glissante pour filtrer les mouvements parasites.'),
+(4, 'Aim Assist 3D', 'Système de magnétisme ciblant le vertex le plus proche.'),
+(4, 'Séparation d''intention', 'Création d''un système à 3 zones pour interpréter les mouvements complexes.'),
+(4, 'Pré-sélection visuelle', 'Mise en surbrillance via le module GPU de Blender.');
 
--- Features pour Etam (ID = 5)
+-- Features pour Flixthread (ID = 5)
 INSERT INTO project_features (project_id, title, description) 
 VALUES 
-(5, 'Gestion de projet', 'Management et coordination de 2 créatifs et 2 marketeurs.'),
-(5, 'Conception UI Zéro', 'Recherche et implémentation de concepts d''interfaces invisibles.'),
-(5, 'Intégration IA', 'Modélisation de fonctionnalités d''intelligence artificielle sur Figma.');
+(5, 'Architecture Sécurisée', 'PHP pur avec protection XSS, injections SQL et sécurisation des uploads.'),
+(5, 'Système de Tokens CSRF', 'Jetons de sécurité uniques pour valider l''intégrité des requêtes.'),
+(5, 'Salons thématiques', 'Fils de discussion isolés et dédiés à des œuvres cinématographiques.'),
+(5, 'Gestion de profils', 'Système d''authentification et d''édition de profil complet.');
 
--- Features pour PixelTrader (ID = 6)
+-- Features pour Etam (ID = 6)
 INSERT INTO project_features (project_id, title, description) 
 VALUES 
-(6, 'Conception UX/UI', 'Création des maquettes et définition du parcours utilisateur.'),
-(6, 'Développement API REST', 'Architecture backend avec Symfony pour traiter l''ajout des jeux.'),
-(6, 'Intégration des KPI', 'Calcul entre le prix d''achat et l''estimation de revente.');
+(6, 'Gestion de projet', 'Management et coordination de 2 créatifs et 2 marketeurs.'),
+(6, 'Conception UI Zéro', 'Recherche et implémentation de concepts d''interfaces invisibles.'),
+(6, 'Intégration IA', 'Modélisation de fonctionnalités d''intelligence artificielle sur Figma.');
 
--- Features pour Eveny (ID = 7)
+-- Features pour PixelTrader (ID = 7)
 INSERT INTO project_features (project_id, title, description) 
 VALUES 
-(7, 'Temps réel', 'Mise en place du Hub Mercure pour la synchronisation en direct.'),
-(7, 'Vues automatisées', 'Interfaces dynamiques React pour Kanban, Calendrier et Gantt.'),
-(7, 'Architecture backend', 'Conception de l''API sous Symfony pour gérer la logique complexe.');
+(7, 'Conception UX/UI', 'Création des maquettes et définition du parcours utilisateur.'),
+(7, 'Développement API REST', 'Architecture backend avec Symfony pour traiter l''ajout des jeux.'),
+(7, 'Intégration des KPI', 'Calcul entre le prix d''achat et l''estimation de revente.');
 
--- Features pour Dépassement de soi (ID = 8)
+-- Features pour Eveny (ID = 8)
 INSERT INTO project_features (project_id, title, description) 
 VALUES 
-(8, 'Parallax & Photobashing', 'Effet parallax simulant l''ascension d''une montagne sur Photoshop.'),
-(8, 'Animation Graphique', 'Graphique dynamique JS/CSS illustrant la résilience.'),
-(8, 'Lumière Interactive', 'Effet de lampe torche pour révéler des éléments cachés dans le DOM.');
+(8, 'Temps réel', 'Mise en place du Hub Mercure pour la synchronisation en direct.'),
+(8, 'Vues automatisées', 'Interfaces dynamiques React pour Kanban, Calendrier et Gantt.'),
+(8, 'Architecture backend', 'Conception de l''API sous Symfony pour gérer la logique complexe.');
 
--- Features pour Pokémon (ID = 9)
+-- Features pour Dépassement de soi (ID = 9)
 INSERT INTO project_features (project_id, title, description) 
 VALUES 
-(9, 'Intégration PokeAPI', 'Récupération et stockage des données de plus de 1400 cartes.'),
-(9, 'Système de compte', 'Authentification SQL et logique d''ajout aux favoris.'),
-(9, 'Mécaniques de jeu', 'Ouverture de boosters et système d''échange entre joueurs.');
+(9, 'Parallax & Photobashing', 'Effet parallax simulant l''ascension d''une montagne sur Photoshop.'),
+(9, 'Animation Graphique', 'Graphique dynamique JS/CSS illustrant la résilience.'),
+(9, 'Lumière Interactive', 'Effet de lampe torche pour révéler des éléments cachés dans le DOM.');
+
+-- Features pour Pokémon (ID = 10)
+INSERT INTO project_features (project_id, title, description) 
+VALUES 
+(10, 'Intégration PokeAPI', 'Récupération et stockage des données de plus de 1400 cartes.'),
+(10, 'Système de compte', 'Authentification SQL et logique d''ajout aux favoris.'),
+(10, 'Mécaniques de jeu', 'Ouverture de boosters et système d''échange entre joueurs.');

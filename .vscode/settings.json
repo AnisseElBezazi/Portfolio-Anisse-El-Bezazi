@@ -1,0 +1,10 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "name": "Portfolio",
+      "database": "${workspaceFolder:Portfolio-Anisse-El-Bezazi}/database.db"
+    }
+  ]
+}
